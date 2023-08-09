@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符</title>
+  <script src="js/vue.globa.js"></script>
+  <style>
+    #big{
+    width:600px;
+      height:600px;
+      background-color:#fcc;
+}
+    #mid{
+    width:400px;
+      height:400px;
+      background-color:#cff;
+}
+    #small{
+    width:200px;
+      height:200px;
+      background-color:#ccf;
+}
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="big" @click="big_clicked">
+    <div id="mid"@click="mid_clicked">
+      <div id="small"@click.stop="small_clicked"></div>
+    </div>
+  </div>
+
+  <a href="https://www.atstudy.com" @click="a_clicked">学掌门</a>
+</div>
+
+<script>
+  const app =  Vue.createApp({
+    data(){
+      return{
+
+
+
+      }
+    },
+    methods :{
+      big_clicked(){
+        console.log("big")
+      },
+      mid_clicked(){
+         console.log("mid")
+      },
+      small_clicked(){
+         console.log("small")
+      },
+      a_clicked(){
+          alert("小鸡")
+      },
+
+
+    }
+
+  })
+  app.mount("#app")
+</script>
+</body>
+</html>

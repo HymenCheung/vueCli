@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>模板语法</title>
+  <script src="js/vue.globa.js"></script>
+</head>
+<body>
+<div id="app">
+    姓名：<span>{{name}}</span><br>
+    年龄：<span>{{age}}</span><br>
+    地址：<span>{{address}}</span><br>
+    性别：<span>{{sex}}</span><br>
+    个人信息：<span>{{info}}</span><br>
+    个人信息：<span v-html="info"></span><br>
+    <br><br><br>
+    请输入姓名：<input type="text" v-bind:value="name"><br>
+    请输入地址：<input type="text" :value="address"><br>
+
+    <button v-on:click="btn_clicked()">点我</button>
+<!--    简写-->
+    <button :click="btn_clicked()">点我</button>
+
+</div>
+
+<script>
+  const app = Vue.createApp({
+      data(){
+          return{
+              name:"小鸡鸡🐦",
+              age: 18,
+              address:"上海",
+              sex: "男",
+              info:"<font color='#fcc'>小鸡爱打篮球🏀</font>"
+          }
+      },
+      methods :{
+          btn_clicked(){
+            alert("小鸡打了两年半🏀")
+          }
+      }
+
+  })
+      app.mount("#app")
+</script>
+</body>
+</html>

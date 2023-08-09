@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学掌门</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <style>
+        .search>input{
+            outline:none;
+            padding-left:15px;
+            padding-right:30px;
+            border-top-left-radius:30px;
+            border-bottom-left-radius:30px;
+
+            border:0px;
+            font-size:14px;
+            height:32px;
+        }
+        .search-text{
+            height:32px;
+            border:0px;
+            border-top-right-radius:30px;
+            border-bottom-right-radius:30px;
+            width:30px;
+            background-color:#fff;
+        }
+        .cart{
+            color:rgb(171,173,175);
+            font:14px;
+        }
+        .login{
+            color:rgb(171,173,175);
+        }
+        .line{
+            width:1px;
+            height:14px;
+
+            background-color:#999;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-dark  bg-dark navbar-expand-lg">
+    <div class="container ">
+        <div class="navbar-brand">
+            <img src="https://www.atstudy.com/img/index_logo_head.png" alt="">
+        </div>
+        <div class="collapse navbar-collapse" id="menu1">
+            <div class="navbar-nav">
+                <div class="nav-item">
+                    <a href="" class="nav-link">首页</a>
+                </div>
+                <div class="nav-item">
+                    <a href="" class="nav-link">选课中心</a>
+                </div>
+                <div class="nav-item">
+                    <a href="" class="nav-link">讲师团队</a>
+                </div>
+                <div class="nav-item">
+                    <a href="" class="nav-link">意见反馈</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!--            搜索框-->
+            <div class="search d-flex">
+                <input type="text" placeholder="请输入">
+                <div class="search-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+            </div>
+
+
+        <div class="collapse navbar-collapse" id="menu2">
+            <div class="d-flex cart align-items-center">
+                <div class="mr-3">下载APP</div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </div>
+                <div class="ml-2">购物车</div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menu3">
+            <div class="login d-flex align-items-center">
+                <div>登录</div>
+                <div class="line mx-2"></div>
+                <div>注册</div>
+            </div>
+        </div>
+        <div class="btn btn-outline-primary " data-toggle="collapse" data-target="#menu1,#menu2,#menu3">菜单</div>
+
+    </div>
+</div>
+</body>
+</html>

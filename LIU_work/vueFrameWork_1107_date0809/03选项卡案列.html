@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡案列</title>
+  <script src="js/vue.globa.js"></script>
+  <style>
+    .tab-list{
+      display:flex;
+    }
+    .tab{
+      padding:8px 16px;
+      border:1px #fcc solid;
+      cursor:pointer;
+      margin-right:16px;
+
+    }
+    .tan.active{
+      background-color:#cfc;
+      color:#333;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="tab-list">
+    <div @click="tab_clicked(0)" class="tab" :class="{'active': tab_active ==0}">课程介绍</div>
+    <div @click="tab_clicked(1)" class="tab" :class="{'active': tab_active ==1}">章节目录</div>
+    <div @click="tab_clicked(2)" class="tab" :class="{'active': tab_active ==2}">用户评价</div>
+  </div>
+  <div class="tab-info" v-show="tab_active ==0">
+    <p>小鸡鸡</p>
+  </div>
+  <div class="tab-info"v-show="tab_active ==1">
+    <ul>
+      <li>rap</li>
+      <li>爱好</li>
+      <li>唱</li>
+      <li>跳</li>
+      <li>篮球</li>
+    </ul>
+  </div>
+  <div class="tab-info"v-show="tab_active ==2">
+    两年半
+  </div>
+</div>
+<script>
+  const app =  Vue.createApp({
+    data(){
+      return{
+        tab_active:0,
+
+
+      }
+    },
+    methods :{
+      tab_clicked(index){
+        this.tab_active = index
+      }
+    }
+
+  })
+  app.mount("#app")
+</script>
+</body>
+</html>

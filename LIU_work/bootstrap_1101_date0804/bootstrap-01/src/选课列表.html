@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选课中心</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <style>
+    .line{
+    height:16px;
+    width:1px;
+    background-color:#999;
+    }
+    .up{
+      width:0px;
+      height:0px;
+      border:4px transparent solid;
+      border-bottom:4px #999 solid;
+    }
+    .down{
+      width:0px;
+      height:0px;
+      border:4px transparent solid;
+      border-top:4px #999 solid;
+    }
+    .activa{
+      color:#ff5d00;
+    }
+    .up.active{
+      border-bottom:4px #ff5d00 solid;
+    }
+    .down.active{
+      border-top:4px #ff5d00 solid;
+    }
+    .course-order{
+    cursor:pointer;
+    }
+  </style>
+
+</head>
+<body>
+<div class="container mt-5">
+<!--  课程筛选面板-->
+  <div class="d-flex align-items-center order-box mb-4">
+    <div class="course-order active ">默认</div>
+    <div class="line mx-3"></div>
+    <div class="d-flex course-order ">
+      <div class="mr-2 ">人气</div>
+      <div class="d-flex flex-column justify-content-around">
+        <div class="up"></div>
+        <div class="down"></div>
+      </div>
+    </div>
+    <div class="line mx-3"></div>
+    <div class="d-flex course-order">
+      <div>评分</div>
+      <div class="d-flex flex-column justify-content-around">
+        <div class="up"></div>
+        <div class="down"></div>
+      </div>
+    </div>
+    <div class="line mx-3"></div>
+    <div class="d-flex course-order">
+      <div>价格</div>
+      <div class="d-flex flex-column justify-content-around">
+        <div class="up"></div>
+        <div class="down"></div>
+      </div>
+    </div>
+
+<!--    右半部分-->
+  <div class="ml-auto mr-3">
+    <lable style="color:#ff5d00;"><input type="checkbox"><span class="ml-3">免费课</span></lable>
+  </div>
+  <div class="mr-3">
+    <lable><input type="checkbox"><span class="ml-3">付费课</span></lable>
+  </div>
+  <div class="mr-3">
+    <lable><input type="checkbox"><span class="ml-3">可试学</span></lable>
+  </div>
+  <div class="mr-3">
+    <lable><input type="checkbox"><span class="ml-3">正在直播</span></lable>
+  </div>
+
+  </div>
+
+<!--  课程列表-->
+  <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 course mb-3 rounded">
+          <div class="card">
+            <img src="https://cdn.atstudy.com/course/16908727290834405.png" alt="" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title">Python数据分析进修实战课</div>
+                <div class="card-text d-flex align-items-center">
+                  <img src="https://www.atstudy.com/img/teacher/icon.png" alt="" style="width:12px;height:12px">
+                  <div class="mx-1">0</div>
+                  <div>入门</div>
+                  <div class="ml-auto">￥</div>
+                  <div>8000</div>
+                </div>
+            </div>
+          </div>
+      </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+<script>
+
+
+  $(document).ready(function(){
+
+    $(".course-order").click(function(){
+      if ($(this).hasClass("active")){
+      //切换上下箭头的激活样式
+        $(this).find(".up,.down").toggleClass("active")
+      }else{
+        $(".course-order,.up,.down").removeClass("active")
+        $(this).addClass("active")
+        $(this).find(".down").addClass("active")
+
+      }
+
+    })
+
+
+
+
+
+
+
+
+
+
+    $(".course").hover(function(){
+        $(this).animate({"margin-top":"-5px"},{duration:300})
+        $(this).prop("boxShadow","0px 0px 8px #ccc")
+      },
+      function(){
+        $(this).animate({"margin-top":"0px"},{duration:300})
+        $(this).prop("boxShadow","0px 0px 0px #ccc")
+      }
+    )
+
+
+
+  })
+</script>
+
+
+</body>
+</html>

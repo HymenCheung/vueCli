@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="js/vue.globa.js"></script>
+  <style>
+    .course{
+      width:282px;
+      box-shadow:0px 0px 8px #999;
+      border-radius:10px;
+    }
+    .course>img{
+      width:282px;
+      height:168px;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+    }
+    .course-content{
+      padding:6px;
+      margin:8px;
+    }
+    .course-title{
+      color:#333;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .course-content-bottom img{
+      width:30px;
+      height:30px;
+    }
+    .course-content-bottom{
+      margin-top:10px;
+      display:flex;
+      align-items:center;
+    }
+    .ml-auto{
+      margin-left:auto;
+
+    }
+    .mr-3{
+      margin-right:3px;
+    }
+    .mr-6{
+      margin-right:6px;
+    }
+    .font-12{
+      font-size:12px;
+    }
+    .font-14{
+      font-size:14px;
+    }.font-16{
+      font-size:16px;
+    }
+    .color-999{color:#999;
+    }
+    .color-ff9d00{
+      color:#ff9d00;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+<!--  一个课程-->
+  <div class="course">
+    <img src="./img/WPS拼图0.png" alt="">
+    <div class="course-content">
+      <div class="course-title">🐦你太美</div>
+      <div class="course-content-bottom">
+        <img src="./img/a56fb9dc25d96c6a46e8437a2ffb4441_20145_300_300.jpg" alt="">
+        <div class="font-12 mr-12">计亮</div>
+        <div class="font-12">爱好篮球🏀</div>
+        <div class="font-12 ml-auto color-ff9d00">唱跳</div>
+        <div class="font-14 color-ff9d00">练习时长两年半</div>
+      </div>
+    </div>
+  </div>
+  <course></course>
+</div>
+<script type="module">
+  import course from "./js/course.js"
+  const app = Vue.createApp({
+    data(){
+      return{
+
+      }
+    },
+    methods(){
+
+    },
+    computed:{},
+    watch:{}
+  })
+  app.js("course",course)
+  app.mount("#app")
+
+  app.js("course",{
+    template: <div class="course">
+                        <img src="" alt="">
+                     <div class="course-content">
+                        <div class="course-title">基于实时大数据开发</div>
+                        <div class="course-content-bottom">
+                                <img src="" alt="">
+                                <div class="mr-12">2</div>
+                                <div class="">入门</div>
+                                <div class="font-16 ml-auto color-ff9d00">￥</div>
+                                <div class="font-16 color-ff9d00">329</div>
+                        </div>
+                     </div>
+                </div>,
+    data(){
+      return{
+
+      }
+    },
+    methods(){
+
+    },
+
+
+  })
+</script>
+</body>
+</html>
