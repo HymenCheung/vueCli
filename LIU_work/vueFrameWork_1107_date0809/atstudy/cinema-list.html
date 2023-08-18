@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影院筛选页面</title>
+  <script src="js/vue.globa.js"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+  <navbar :index="index"></navbar>
+<!--  影院筛选面板-->
+  <div class="container border-box shadow py-15 px-40 radius">
+<!--    影院品牌-->
+    <div class="d-flex color-999" v-if="brand_list != undefined">
+      <div class="w-10 py-4 px-8">影院品牌：</div>
+      <div class="w-90 d-flex flex-wrap">
+        <div class="py-4 px-8 radius filter-item mx-3 pointer"
+          :class="{'active':selected_brand == undefined}"
+             @click="brand_clicked(undefined)">全部</div>
+        <div class="py-4 px-8 radius mx-3 pointer"
+          v-for="(brand,brandIndex) of brand_list "
+          :key="'brand' + brand.brand_id"
+          :class="{'active': selected_brand == brand.brand_id}"
+             @click="brand_clicked(brand.brand_id)">{{brand.brand_name}}</div>
+      </div>
+    </div>
+<!--    行政地区-->
+    <div class="d-flex color-999 mt-21" v-if="loc_list != undefined">
+      <div class="w-10 py-4 px-8">行政地区：</div>
+      <div class="w-90 d-flex flex-wrap">
+        <div class="py-4 px-8 radius filter-item mx-3 pointer"
+          :class="{'active':selected_loc == undefined}"
+             @click="loc_clicked(undefined)">全部</div>
+        <div class="py-4 px-8 radius mx-3 pointer filter-item"
+          v-for="(loc,locIndex) of loc_list"
+          :key="'location' + loc.location_id"
+          :class="{'active':selected_loc == loc.location_id}"
+             @click="loc_clicked(loc.location_id)">{{loc.location_name}}</div>
+      </div>
+    </div>
+    <div class="d-flex color-999 mt-21" v-if="hall_list != undefined">
+      <div class="w-10 py-4 px-8">放映厅：</div>
+      <div class="w-90 d-flex flex-wrap">
+        <div class="py-4 px-8 radius filter-item mx-3 pointer"
+          :class="{'active':selected_hall == undefined}"
+             @click="hall_clicked(undefined)">全部</div>
+        <div class="py-4 px-8 radius mx-3  pointer filter-item"
+          v-for="(hall,hallIndex) of hall_list"
+          :key="'hall' + hall.hall_category_id"
+          :class="{'active':selected_hall == hall.hall_category_id}"
+          @click="hall_clicked(hall.hall_category_list)">{{hall.hall_category_name}}</div>
+      </div>
+    </div>
+    <div class="d-flex color-999 mt-21" v-if="service_list != undefined">
+      <div class="w-10 py-4 px-8">票务服务：</div>
+      <div class="w-90 d-flex flex-wrap">
+        <div class="py-4 px-8 radius filter-item mx-3 pointer"
+          :class="{'active':selected_service == undefined}"
+             @click="service_clicked( undefined)">全部</div>
+        <div class="py-4 px-8 radius mx-3 pointer filter-item"
+          v-for="(service,serviceIndex) of service_list"
+          :key="'service' + service.service_id"
+          :clsss="{'active':selected_service == service.service_id}"
+             @click="service_clicked(service.service_id)">{{service.service_name}}</div>
+      </div>
+    </div>
+
+  </div>
+
+<!--  影院列表-->
+  <div class="container mt-21" v-if="cinema_list != undefined">
+    <div class="font-24 font-bolder color-999">影院列表</div>
+    <template v-for="(cinema,cinemaIndex) of cinema_list"
+              :key="'cinema' + cinema.cinema_id">
+<!--      一个影院-->
+      <a href="cinema.html" class="py-10 px-20 shadow radius mt-21 d-flex align-items-center text-decoration-none">
+        <div>
+          <div class="color-666">{{cinema.cinema_name}}</div>
+          <div class="font-14 color-999">{{cinema.cinema_address}}</div>
+          <div class="d-flex">
+            <div class="mr-8 my-9" v-for="(hall,hallIndex) of cinema.hall_category_list"
+                 :key="'hall' + hall.hall_category_list">
+              <span class="py-4 px-8 border-blue color-blue radius">{{hall.hall_category_name}}</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="ml-auto mr-36 font-14">
+          <div><span class="color-ff0000">￥{{cinema.cinema_min_price}}起</span></div>
+          <div class="mt-15 font-12 color-666 text-right" >{{cinema.cinema_distance}}km</div>
+        </div>
+        <div class="bg-red color-fff radius py-6 px-15">选座购票</div>
+      </a>
+    </template>
+
+  </div>
+</div>
+
+<script type="module">
+
+  import {cinema_filter} from "./util/cinema-util.js";
+
+  import navbar from "./component/navbar.js";
+
+  const app = Vue.createApp({
+    data(){
+      return{
+        index:2,
+        // 所有的影院品牌数据
+        brand_list:undefined,
+        // 当前选中的影院品牌数据
+        selected_brand:undefined,
+        //所有行政地区数据
+        loc_list:undefined,
+        //选中的行政地区
+        selected_loc:undefined,
+        // 所有的放映厅
+        hall_list:undefined,
+        // 当前选中的放映厅id
+        selected_hall:undefined,
+        // 所有的票务服务类型
+        service_list:undefined,
+        // 当前选中的票务服务
+        selected_service:undefined,
+        // 满足筛选条件的影院数据
+        cinema_list:undefined,
+
+      }
+    },
+    methods:{
+      async brand_clicked(brand_id){
+        this.selected_brand = brand_id
+        this.cinema_list = await cinema_filter({brand_id:this.selected_id,location_id:this.selected_loc,hall_category_id:this.selected_hall,service_id:this.selected_service})
+      },
+      async loc_clicked(loc_id){
+        this.selected_loc = loc_id
+        this.cinema_list = await cinema_filter({brand_id:this.selected_id,location_id:this.selected_loc,hall_category_id:this.selected_hall,service_id:this.selected_service})
+      },
+      async hall_clicked(hall_id){
+        this.selected_hall =hall_id
+        this.cinema_list = await cinema_filter({brand_id:this.selected_id,location_id:this.selected_loc,hall_category_id:this.selected_hall,service_id:this.selected_service})
+      },
+      async service_clicked(service_id){
+        this.selected_service = service_id
+        this.cinema_list = await cinema_filter({brand_id:this.selected_id,location_id:this.selected_loc,hall_category_id:this.selected_hall,service_id:this.selected_service})
+      },
+
+    },
+    async mounted(){
+    // 在视图挂在完毕之后获取到所有的影院品牌
+      fetch("./data/brand_list.json")
+        .then(response => response.json())
+        .then(response => {
+          this.brand_list = response
+          console.log(this.brand_list)
+        })
+      fetch("./data/location_list.json")
+        .then(response => response.json())
+        .then(response => {
+          this.loc_list = response
+          console.log(this.loc_list)
+        })
+        // 获取到所有的放映厅的数据
+      fetch("./data/hall_category_list.json")
+        .then(response => response.json())
+        .then(response => {
+          this.hall_list = response
+          console.log(this.hall_list)
+        })
+       // 获取到所有的票务服务
+      fetch("./data/service_list.json")
+        .then(response => response.json())
+        .then(response => {
+          this.service_list = response
+          console.log(this.service_list)
+        })
+        // 获取到所有影院数据
+        this.cinema_list = await cinema_filter()
+        console.log(this.cinema_list)
+    }
+  })
+
+  app.component("navbar",navbar)
+
+  app.mount("#app")
+</script>
+</body>
+</html>

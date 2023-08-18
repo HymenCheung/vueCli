@@ -1,0 +1,74 @@
+[
+	{
+		"country_id" : 1001,
+		"country_name" : "大陆"
+	},
+	{
+		"country_id" : 1002,
+		"country_name" : "美国"
+	},
+	{
+		"country_id" : 1003,
+		"country_name" : "韩国"
+	},
+	{
+		"country_id" : 1004,
+		"country_name" : "日本"
+	},
+	{
+		"country_id" : 1005,
+		"country_name" : "中国香港"
+	},
+	{
+		"country_id" : 1006,
+		"country_name" : "中国台湾"
+	},
+	{
+		"country_id" : 1007,
+		"country_name" : "泰国"
+	},
+	{
+		"country_id" : 1008,
+		"country_name" : "印度"
+	},
+	{
+		"country_id" : 1009,
+		"country_name" : "法国"
+	},
+	{
+		"country_id" : 1010,
+		"country_name" : "英国"
+	},
+	{
+		"country_id" : 1011,
+		"country_name" : "俄罗斯"
+	},
+	{
+		"country_id" : 1012,
+		"country_name" : "意大利"
+	},
+	{
+		"country_id" : 1013,
+		"country_name" : "西班牙"
+	},
+	{
+		"country_id" : 1014,
+		"country_name" : "德国"
+	},
+	{
+		"country_id" : 1015,
+		"country_name" : "波兰"
+	},
+	{
+		"country_id" : 1016,
+		"country_name" : "澳大利亚"
+	},
+	{
+		"country_id" : 1017,
+		"country_name" : "新西兰"
+	},
+	{
+		"country_id" : 1018,
+		"country_name" : "其他"
+	}
+]

@@ -1,0 +1,66 @@
+[
+	{
+		"brand_id" : 1,
+		"brand_name" : "SFC上影影城"
+	},
+	{
+		"brand_id" : 2,
+		"brand_name" : "万达影城"
+	},
+	{
+		"brand_id" : 3,
+		"brand_name" : "CGV影城"
+	},
+	{
+		"brand_id" : 4,
+		"brand_name" : "嘉禾影城"
+	},
+	{
+		"brand_id" : 5,
+		"brand_name" : "大光明电影院"
+	},
+	{
+		"brand_id" : 6,
+		"brand_name" : "百丽宫影城"
+	},
+	{
+		"brand_id" : 7,
+		"brand_name" : "上影国际影城"
+	},
+	{
+		"brand_id" : 8,
+		"brand_name" : "保利国际影城"
+	},
+	{
+		"brand_id" : 9,
+		"brand_name" : "完美世界影城"
+	},
+	{
+		"brand_id" : 10,
+		"brand_name" : "横店影视"
+	},
+	{
+		"brand_id" : 11,
+		"brand_name" : "金逸影城"
+	},
+	{
+		"brand_id" : 12,
+		"brand_name" : "中影国际影城"
+	},
+	{
+		"brand_id" : 13,
+		"brand_name" : "星美国际影城"
+	},
+	{
+		"brand_id" : 14,
+		"brand_name" : "上影CGV"
+	},
+	{
+		"brand_id" : 15,
+		"brand_name" : "永乐影城"
+	},
+	{
+		"brand_id" : 16,
+		"brand_name" : "百老汇影城"
+	}
+]

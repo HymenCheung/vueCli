@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多元素过渡</title>
+  <script src="js/vue.globa.js"></script>
+  <style>
+    .tab-list{
+      display:flex;
+    }
+    .tab{
+      padding:4px 8px;
+      border:1px #ccf solid;
+      cursor:pointer;
+
+    }
+    .tab.active{
+      background-color:#fcc;
+      color:#000;
+    }
+    .content{
+      width:400px;
+    height:200px;
+      border:1px #ffc solid;
+      color:#fcf;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="tab-list">
+    <div class="tab active"></div>
+    <div class="tab">章节目录</div>
+    <div class="tab">用户篇评论</div>
+  </div>
+  <div v-is="'content-'+tabIndex"></div>
+</div>
+
+<script>
+  const app = createApp({
+    data(){
+      return{
+        tabIndex:0
+      }
+    },
+    methods:{}
+  })
+  app.component("content-0",content-0)
+  app.mount("#app")
+</script>
+</body>
+</html>

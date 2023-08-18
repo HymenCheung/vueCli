@@ -1,0 +1,11 @@
+{
+	"round_id" : 4,
+	"round_begin_time" : "14:50",
+	"round_end_time" : "16:40",
+	"round_language" : "英语4DX",
+	"round_hall" : "7号4DX厅",
+	"round_date" : "4月22日",
+	"round_date_tag" : "今天",
+	"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+	"round_price" : 60.9
+}

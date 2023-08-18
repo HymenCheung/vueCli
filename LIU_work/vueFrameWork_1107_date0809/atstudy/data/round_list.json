@@ -1,0 +1,119 @@
+[
+	{
+		"round_id" : 1,
+		"round_begin_time" : "11:30",
+		"round_end_time" : "13:20",
+		"round_language" : "日语2D",
+		"round_hall" : "10号-6FL厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 37.9
+	},
+	{
+		"round_id" : 2,
+		"round_begin_time" : "13:30",
+		"round_end_time" : "15:20",
+		"round_language" : "日语2D",
+		"round_hall" : "6号-REALD厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 40.9
+	},
+	{
+		"round_id" : 3,
+		"round_begin_time" : "14:05",
+		"round_end_time" : "15:55",
+		"round_language" : "日语2D",
+		"round_hall" : "VIP厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 104.9
+	},
+	{
+		"round_id" : 4,
+		"round_begin_time" : "14:50",
+		"round_end_time" : "16:40",
+		"round_language" : "日语2D",
+		"round_hall" : "7号4DX厅",
+		"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 60.9
+	},
+	{
+		"round_id" : 5,
+		"round_begin_time" : "15:40",
+		"round_end_time" : "17:30",
+		"round_language" : "日语2D",
+		"round_hall" : "5号-4K厅",
+		"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 40.9
+	},
+	{
+		"round_id" : 6,
+		"round_begin_time" : "16:20",
+		"round_end_time" : "18:10",
+		"round_language" : "日语2D",
+		"round_hall" : "6号-REALD厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 40.9
+	},
+	{
+		"round_id" : 7,
+		"round_begin_time" : "17:55",
+		"round_end_time" : "19:45",
+		"round_language" : "日语2D",
+		"round_hall" : "5号-4K厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 40.9
+	},
+	{
+		"round_id" : 8,
+		"round_begin_time" : "18:30",
+		"round_end_time" : "20:20",
+		"round_language" : "日语2D",
+		"round_hall" : "6号-REALD厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 40.9
+	},
+	{
+		"round_id" : 9,
+		"round_begin_time" : "19:00",
+		"round_end_time" : "20:50",
+		"round_language" : "日语2D",
+		"round_hall" : "VIP厅",
+		"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 104.9
+	},
+	{
+		"round_id" : 10,
+		"round_begin_time" : "19:30",
+		"round_end_time" : "21:20",
+		"round_language" : "日语2D",
+		"round_hall" : "7号4DX厅",
+		"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 60.9
+	},
+	{
+		"round_id" : 11,
+		"round_begin_time" : "20:20",
+		"round_end_time" : "22:10",
+		"round_language" : "日语2D",
+		"round_hall" : "5号-4K厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 44.9
+	},
+	{
+		"round_id" : 12,
+		"round_begin_time" : "21:00",
+		"round_end_time" : "22:50",
+		"round_language" : "日语2D",
+		"round_hall" : "6号-REALD厅",
+		"round_notice_list" : [{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 44.9
+	},
+	{
+		"round_id" : 13,
+		"round_begin_time" : "21:50",
+		"round_end_time" : "23:40",
+		"round_language" : "日语2D",
+		"round_hall" : "7号4DX厅",
+		"round_notice_list" : [{"notice_id":2,"notice_name":"儿童需购票"},{"notice_id":1,"notice_name":"厅内禁止饮食"}],
+		"round_price" : 60.9
+	}
+]

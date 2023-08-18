@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影片详情</title>
+  <script src="js/vue.globa.js"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+  <navbar :index="index"></navbar>
+<!--  电影详情-->
+  <div class="film-info position-relative" v-if="film != undefined">
+    <img src="./img/movie_bg.png" alt="" style="width:100% ;height:350px">
+    <div class="">
+      <div class="film-info-img position-absolute">
+        <img :src="'/img/'+film.film_cover_image" alt="" class="film-info-img">
+      </div>
+    </div>
+    <div class="position-absolute film-content color-fff">
+      <div class="font-24 font-bolder">{{film.film_name}}</div>
+      <div class="font-18 font-bolder">{{film.film_title}}</div>
+      <div class="d-flex font-12 mt-12">
+        <div class="mr-10"
+          v-for="(cate,cateIndex) of film.category_list"
+          :key="'filmInfo' + cate.category_id">{{cate.category_name}}</div>
+
+      </div>
+      <div class="d-flex font-12 mt-9">
+        <div class="d-flex">
+          <div class="mr-10"
+            v-for="(loc,locIndex) of film.country_list"
+            :key="'filmLocInfo'+ loc.country_id">{{loc.country_name}}</div>
+
+        </div>
+        <div class="mx-9">/</div>
+        <div>{{film.film_duration}}</div>
+      </div>
+      <div class="d-flex mt-9 font-12 color-fff">
+        <div class="mr-14">{{film.film_release_date}}</div>
+        <div>中国大陆上映</div>
+      </div>
+      <div class="d-flex">
+        <div class="mr-36">
+          <div class="mt-84 d-flex">
+            <button class="py-6 color-fff bg-gray px-40 radius border-none mr-8">想看</button>
+            <button class="py-6 color-fff bg-gray px-40 radius border-none">评分</button>
+          </div>
+          <div>
+            <button class="radius py-10 px-85 border-none  bg-red  color-fff mt-12">特惠购票</button>
+          </div>
+        </div>
+        <div class="flex-column justify-content-between  align-items-stretch">
+<!--          猫眼口碑-->
+          <div>
+            <div class="font-12 color-fff">猫眼口碑</div>
+            <div class="d-flex">
+              <div class="font-32 color-ff0000 font-bolder mr-16">{{film.film_rank}}</div>
+              <div>
+                <div>
+                  <img style="width:12px" src="./img/star_yellow.png" alt="">
+                  <img style="width:12px" src="./img/star_yellow.png" alt="">
+                  <img style="width:12px" src="./img/star_yellow.png" alt="">
+                  <img style="width:12px" src="./img/star_half.png" alt="">
+                  <img style="width:12px" src="./img/star_off.png" alt="">
+                </div>
+                <div class="font-12 color-fff mt-3">12936人评分</div>
+              </div>
+            </div>
+          </div>
+<!--          累计票房-->
+          <div class="mt-32 color-fff">
+            <div class="font-12">累计票房</div>
+            <div class="font-32 font-bolder"><span class="font-32 ">{{film.film_box_total}}</span>亿</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-64 d-flex align-items-start">
+    <div class="w-65 mt-64" v-if="film != undefined">
+      <!--演职人员-->
+      <div>
+        <div class="actor-list-title font-24 color-999 font-bolder">演职人员</div>
+        <div class="mt-12 d-flex">
+          <!--导演-->
+          <div class="mr-16"
+               v-for="(director,directorIndex) of film.director_list"
+               :key="'director' + director.director_id">
+            <div >导演</div>
+            <div class="py-4 border-1-gray mt-6" style="width:143px;box-sizing:border-box">
+              <img :src="'/img/'+ director.director_cover_image" alt="" style="width:135px " class="p-2"></div>
+            <div class="mt-6">{{director.director_name}}</div>
+          </div>
+          <!--演员-->
+          <div class="mr-4"
+               v-for="(actor,actorIndex) of film.actor_list"
+               :key="'filmInfoActor' + actor.actor_id">
+            <div class="">演员</div>
+            <div class="py-4 border-1-gray mt-6" style="width:143px;box-sizing:border-box">
+              <img :src="'/img/'+actor.actor_cover_image" alt="" style="width:135px"  class="p-2"></div>
+            <div class="mt-6">
+              <div>{{actor.actor_name}}</div>
+              <div class="font-12 color-999">饰:{{actor.play}}</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!--剧情简介-->
+      <div>
+        <div class="mt-21" style="width:740px">
+          <div class="font-24 color-999 font-bolder">剧情简介</div>
+          <div class="color-999 mt-12 mr-36">{{film.film_introduce}}</div>
+        </div>
+      </div>
+
+
+      <!--热门评论 -->
+      <div class="mt-21" style="">
+        <div class="font-24 color-999 font-bolder">热门评论</div>
+      <template v-for="(info,infoIndex) of film.comment_list"
+                :key="'comment'+ info.comment_id">
+        <commend :info="info"></commend>
+      </template>
+
+      </div>
+    </div>
+
+    <div class="w-35 p-8 mt-54" v-if="day_film!=undefined && month_film!=undefined && total_film!=undefined">
+      <film-rk :film_list="day_film.data" >今日票房</film-rk>
+      <film-rk :film_list="month_film.data" >本月票房</film-rk>
+      <film-rk :film_list="total_film.data">总票房</film-rk>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<script type="module">
+  import {filmFilter} from "./util/film-utils.js";
+
+  import navbar from "./component/navbar.js";
+  import filmRk from "./component/film-rk.js";
+  import commend from "./component/commend.js";
+  import film from "./component/film.js";
+
+  const app = Vue.createApp({
+    data(){
+      return{
+        index : 1,
+        day_film:undefined,
+        month_film:undefined,
+        total_film:undefined,
+        film:undefined,
+      }
+    },
+    async mounted(){
+       this.day_film = await filmFilter({start:0,length:10})
+
+      this.month_film = await filmFilter({start:5,length:10})
+      this.total_film = await filmFilter({start:7,length:10})
+      fetch("./data/film.json")
+        .then(response => response.json())
+        .then(response =>{
+        this.film = response
+      })
+    }
+  })
+  app.component("navbar",navbar)
+  app.component("film-rk",filmRk)
+  app.component("commend",commend)
+  app.component("film",film)
+  app.mount("#app")
+</script>
+
+</body>
+</html>

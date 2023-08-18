@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影片列表</title>
+
+
+  <script src="js/vue.globa.js"></script>
+  <style>
+    .film-list-title{
+      padding-left:5px;
+      font-size:24px;
+      color:#999;
+      font-weight:bolder;
+
+    }
+    .film{
+      width:176px;
+      padding:8px;
+      box-shadow: 0px 0px 8px #ccc;
+      box-sizing:border-box;
+      border-radius:8px;
+      mragin:10px 15px;
+    }
+    .film>img{
+      width:160px;
+    }
+    .d-flex{
+      display:flex;
+    }
+    .justify-between{
+      justify-content:space-between;
+    }
+    .film-title{
+      font-size:14px;
+      color:#ccc;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .align-end{align-content:flex-end}
+    .score{
+      font:20px;
+      color:red;
+    }
+    .title-en{
+      font-size:14px;
+      color:#999;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      margin-top:6px;
+
+    }
+    .time{
+      font-size:12px;
+      color:#999;
+    }
+    .type{
+      font-size:12px;
+      color:#999;
+      margin-right:5px;
+    }
+    .date{
+      font-size:12px;
+      color:#999;
+    }
+    .loc{
+      font-size:12px;
+      color:#999;
+      margin-right:4px;
+    }
+    .actor{
+      font-size:12px;
+      color:#999;
+      margin-right:4px;
+/*      text-overflow:ellipsis;*/
+    }
+    .flex-wrap{
+      flex-wrap:wrap; /*溢出换行*/
+    }
+
+    .film-list{
+        width:768px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+<!--  <div class="film-list">-->
+<!--    <film v-for="(film,filmIndex) of film_list"-->
+<!--          :key="'film' + film.film_id" :film="film"></film>-->
+
+<!--  </div>-->
+    <film-list :film_list="film_list"></film-list>
+
+</div>
+<script type="module">
+    import film from "./component/film.js";
+    import film_list from "./component/film_list.js";
+  const app =Vue.createApp({
+    data(){
+      return{
+        name:"张三",
+          film_list:[],
+          hot_film_list:[],
+          sf_film_list:[],
+         //  <!--奇趣热映  -->
+          animation_film_list:[]
+      }
+
+    },
+      methods:{},
+      beforeCreate(){},
+      create(){},
+      beforeMount(){
+
+      },
+      mounted(){
+        fetch("./data/film_list.json")
+          .then(response => response.json())
+          .then(response=>{
+          this.film_list = response
+          //从所有的影片中获取到8个作为影片
+          //this.hot_film_list = film_list.splice()
+
+        })
+
+ //*   fetch("./data/film.json")-->
+ //*<!--          .then(response => response.json())-->
+ //*<!--          .then(response=>{-->
+ //*<!--          this.hot_film_list = response-->
+ //*<!--        })
+
+
+
+      },
+
+  })
+//  注册一个组件
+  app.component("film",film)
+ app.component("film-list",film_list)
+  app.mount("#app")
+</script>
+</body>
+</html>

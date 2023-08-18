@@ -1,0 +1,22 @@
+[
+	{
+		"director_id" : 1001,
+		"director_name" : "彼得·杰克逊",
+		"director_cover_image" : "director01.png"
+	},
+	{
+		"director_id" : 1002,
+		"director_name" : "永冈智佳",
+		"director_cover_image" : "director02.png"
+	},
+	{
+		"director_id" : 1003,
+		"director_name" : "殷若昕",
+		"director_cover_image" : "director03.png"
+	},
+	{
+		"director_id" : 1004,
+		"director_name" : "李凯",
+		"director_cover_image" : "director04.png"
+	}
+]

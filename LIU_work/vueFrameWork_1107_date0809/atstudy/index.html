@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学掌门影院</title>
+  <script src="js/vue.globa.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+    <navbar :index="index"></navbar>
+
+   <div class="d-flex container" >
+       <div class="w-65">
+           <film-list :film_list="hot_film " v-if="hot_film != undefined">正在热映</film-list>
+           <film-list :film_list="sf_film" v-if="sf_film != undefined">科幻大片</film-list>
+           <film-list :film_list="animate_film " v-if="animate_film != undefined">奇缺动画</film-list>
+       </div>
+
+
+        <div class="w-35 p-8">
+           <film-rk :film_list="day_film.data" v-if="day_film!=undefined">今日票房</film-rk>
+           <film-rk :film_list="month_film.data" v-if="month_film!=undefined">本月票房</film-rk>
+           <film-rk :film_list="total_film.data" v-if="total_film!=undefined">总票房</film-rk>
+        </div>
+   </div>
+</div>
+
+<script type="module">
+//导入筛选影片的方法
+    import {filmFilter} from "./util/film-utils.js";
+
+    import navbar from "./component/navbar.js";
+    import film from "./component/film.js";
+  import filmList from "./component/film-list.js";
+  import filmRk from "./component/film-rk.js";
+
+  const app = Vue.createApp({
+    data(){
+      return{
+          index : 0,
+          hot_film:[],
+          sf_film:undefined,
+          animate_film:undefined,
+          day_film:undefined,
+          month_film:undefined,
+          total_film:undefined,
+      }
+
+    },
+    methods:{},
+    computed:{},
+    watch:{},
+    async mounted(){
+
+        this.hot_film = await filmFilter({start:0,length:8})
+        this.sf_film = await filmFilter({category_id:1007,start:0,length:8})
+        this.animate_film = await filmFilter({category_id:1003,start:0,length:8})
+        this.day_film = await filmFilter({start:0,length:10})
+        this.month_film = await filmFilter({start:5,length:10})
+        this.total_film = await filmFilter({start:7,length:10})
+        console.log(this.hot_film)
+    }
+  })
+    app.component("navbar",navbar)
+    app.component("film",film)
+    app.component("film-list",filmList)
+    app.component("film-rk",filmRk)
+  app.mount("#app")
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+	{"hall_category_id" : 1 , "hall_category_name" : "IMAX厅"},
+	{"hall_category_id" : 2 , "hall_category_name" : "CGS中国巨幕厅"},
+	{"hall_category_id" : 3 , "hall_category_name" : "杜比全景声厅"},
+	{"hall_category_id" : 4 , "hall_category_name" : "Dolby Cinema厅"},
+	{"hall_category_id" : 5 , "hall_category_name" : "RealD厅"},
+	{"hall_category_id" : 6 , "hall_category_name" : "RealD 6FL厅"},
+	{"hall_category_id" : 7 , "hall_category_name" : "LUXE巨幕厅"},
+	{"hall_category_id" : 8 , "hall_category_name" : "4DX厅"},
+	{"hall_category_id" : 9 , "hall_category_name" : "DTS:X 临境音厅"},
+	{"hall_category_id" : 10 , "hall_category_name" : "儿童厅"},
+	{"hall_category_id" : 11 , "hall_category_name" : "4K厅"},
+	{"hall_category_id" : 12 , "hall_category_name" : "4D厅"},
+	{"hall_category_id" : 13 , "hall_category_name" : "60帧厅"},
+	{"hall_category_id" : 14 , "hall_category_name" : "120帧/4K厅"},
+	{"hall_category_id" : 15 , "hall_category_name" : "巨幕厅"},
+	{"hall_category_id" : 16 , "hall_category_name" : "CINITY厅"},
+	{"hall_category_id" : 17 , "hall_category_name" : "MX4D厅"}
+]

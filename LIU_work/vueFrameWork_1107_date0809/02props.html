@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.globa.js"></script>
+</head>
+<body>
+<div id="app">
+    <stu-list :data="stuList"></stu-list>
+</div>
+<!--开启模块化-->
+<script type="module">
+//导入
+    import stuList from "./component/stuList.js"
+    const app =Vue.createApp({
+        data(){
+            return{
+                stuList:[
+                    {id:"1001",name:"张三",age:"18",sex:"男"},
+                    {id:"1001",name:"李四",age:"19",sex:"nv"},
+                    {id:"1001",name:"王五",age:"18",sex:"男"},
+                    {id:"1001",name:"周六",age:"15",sex:"女"},
+
+                ]
+
+            }
+        }
+    })
+//注册
+     app.component("stuList",stuList)
+    app.mount("#app")
+</script>
+</body>
+</html>

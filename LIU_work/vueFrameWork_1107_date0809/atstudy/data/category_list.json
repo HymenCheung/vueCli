@@ -1,0 +1,106 @@
+[
+	{
+		"category_id" : 1001,
+		"category_name" : "爱情"
+	},
+	{
+		"category_id" : 1002,
+		"category_name" : "喜剧"
+	},
+	{
+		"category_id" : 1003,
+		"category_name" : "动画"
+	},
+	{
+		"category_id" : 1004,
+		"category_name" : "剧情"
+	},
+	{
+		"category_id" : 1005,
+		"category_name" : "恐怖"
+	},
+	{
+		"category_id" : 1006,
+		"category_name" : "惊悚"
+	},
+	{
+		"category_id" : 1007,
+		"category_name" : "科幻"
+	},
+	{
+		"category_id" : 1008,
+		"category_name" : "动作"
+	},
+	{
+		"category_id" : 1009,
+		"category_name" : "悬疑"
+	},
+	{
+		"category_id" : 1010,
+		"category_name" : "犯罪"
+	},
+	{
+		"category_id" : 1011,
+		"category_name" : "冒险"
+	},
+	{
+		"category_id" : 1012,
+		"category_name" : "战争"
+	},
+	{
+		"category_id" : 1013,
+		"category_name" : "奇幻"
+	},
+	{
+		"category_id" : 1014,
+		"category_name" : "运动"
+	},
+	{
+		"category_id" : 1015,
+		"category_name" : "家庭"
+	},
+	{
+		"category_id" : 1016,
+		"category_name" : "古装"
+	},
+	{
+		"category_id" : 1017,
+		"category_name" : "武侠"
+	},
+	{
+		"category_id" : 1018,
+		"category_name" : "西部"
+	},
+	{
+		"category_id" : 1019,
+		"category_name" : "历史"
+	},
+	{
+		"category_id" : 1020,
+		"category_name" : "传记"
+	},
+	{
+		"category_id" : 1021,
+		"category_name" : "歌舞"
+	},
+	{
+		"category_id" : 1022,
+		"category_name" : "黑色电影"
+	},
+	{
+		"category_id" : 1023,
+		"category_name" : "短片"
+	},
+	{
+		"category_id" : 1024,
+		"category_name" : "纪录片"
+	},
+	{
+		"category_id" : 1025,
+		"category_name" : "青春"
+	},
+	{
+		"category_id" : 1026,
+		"category_name" : "其他"
+	}
+]

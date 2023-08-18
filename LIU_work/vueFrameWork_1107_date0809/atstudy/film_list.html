@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影片列表</title>
+    <script src="js/vue.globa.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+    <navbar :index="index"></navbar>
+    <div class="container mt-21 shadow radius color-999 py-6 px-40">
+<!--  影片分类-->
+        <div class="d-flex flex-wrap align-items-start mt-15">
+            <div class="w-5  ">
+                <div class="filter-item radius color-999 px-8 py-4">类型：</div>
+            </div>
+            <div class="w-95 d-flex flex-wrap">
+                <div class=" px-8 py-4 filter-item radius pointer"
+                    :class="{'active':cate_id == undefined}"
+                     @click="cate_clicked(undefined)">全部</div>
+                <div class=" color-999 filter-item pointer radius px-8 py-4 mx-6 "
+                     v-for="(cate,cateIndex) of cate_list"
+                     :key="'cate' + cateIndex"
+                     :class="{'active' : cate_id == cate.category_id}"
+                    @click="cate_clicked(cate.category_id)" >{{cate.category_name}}</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap align-items-start">
+            <div class="w-5  ">
+                <div class="color-999 filter-item radius  px-8 py-4">区域：</div>
+            </div>
+            <div class="w-95 d-flex flex-wrap">
+                <div class=" px-8 py-4 filter-item radius"
+                     :class="{'active':loc_id == undefined}"
+                     @click="loc_clicked(undefined)">全部</div>
+                <div class=" color-999 filter-item pointer radius px-8 py-4 mx-6 "
+                     v-for="(loc,locIndex) of loc_list"
+                     :key="'loc' + locIndex"
+                     :class="{'active':loc_id == loc.country_id}"
+                    @click="loc_clicked(loc.country_id)">{{loc.country_name}}</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap align-items-start">
+            <div class="w-5  ">
+                <div class="color-999 filter-item radius  px-8 py-4">时间：</div>
+            </div>
+            <div class="w-95 d-flex flex-wrap">
+                <div class=" px-8 py-4 filter-item radius"
+                     :class="{'active': select_year == undefined}"
+                     @click="year_clicked(undefined)">全部</div>
+                <div class=" color-999 filter-item radius px-8 py-4 mx-6 "
+                     v-for="(year,yearIndex) of year"
+                     :key="'year' + yearIndex"
+                     :class="{'active':select_year == year}"
+                    @click="year_clicked(year)">{{year}}</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container d-flex flex-wrap align-items-center"  v-if="film_list != undefined">
+        <template v-for="(film, filmIndex) of film_list.data"
+                  :key="'film' + film.film_id" style="margin: 10px 12px;">
+            <film :film="film"></film>
+        </template>
+    </div>
+
+
+
+</div>
+
+<script type="module">
+    import {filmFilter} from "./util/film-utils.js";
+
+    import navbar from "./component/navbar.js";
+    import film from "./component/film.js";
+
+
+    const app = Vue.createApp({
+        data(){
+            return{
+                index:1,
+                loc_list:undefined,
+                cate_list:undefined,
+//                当前被选中的分类id
+                cate_id : undefined,
+                loc_id: undefined,
+                year:[],
+                select_year: undefined,
+                film_list: undefined,
+
+            }
+        },
+        methods:{
+            async cate_clicked(category_id){
+                this.cate_id = category_id
+                this.film_list = await filmFilter({category_id : category_id})
+            },
+            async loc_clicked(loc_id){
+                this.loc_id = loc_id
+                this.film_list = await filmFilter({country_id : loc_id})
+            },
+            async year_clicked(year){
+                this.select_year = year
+                this.film_list = await filmFilter({year : year})
+            },
+
+        },
+        async mounted(){
+//            获取到类型数据
+            fetch("./data/category_list.json")
+                .then(response => response.json())
+                .then(response => {
+                    this.cate_list = response,
+                console.log(this.cate_list)
+                })
+//            获取到区域数据
+            fetch("./data/country_list.json")
+                .then(response => response.json())
+                .then(response => {
+                    this.loc_list = response,
+                console.log(this.loc_list)
+                })
+//            生成年代信息
+            let now = new Date()
+            for (let i = now.getFullYear(); i>= now.getFullYear()-20 ; i--){
+                this.year.push(i)
+            }
+            //在试图挂载后需要获取到所有的影片数据
+            this.film_list = await filmFilter()
+        }
+    })
+
+    app.component("navbar",navbar)
+    app.component("film",film)
+
+    app.mount("#app")
+</script>
+</body>
+</html>

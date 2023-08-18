@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影院筛选页面</title>
+  <script src="js/vue.globa.js"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+  <navbar :index="index"></navbar>
+<!-- 影院头部信息（海报）-->
+  <div class="position-relative" v-if="cinema != undefined">
+    <img src="/img/movie_bg.png" alt="" class="w-100">
+    <div class="position-absolute d-flex align-item-end" style="left:80px; top:75px">
+      <img :src="'/img/'+cinema.cinema_cover_image" alt="" class="p-4 bg-white shadow mr-36" style="width:240px">
+<!--      影片信息-->
+      <div class="color-fff font-14">
+<!--        影院名字-->
+        <div class="font-24 font-bolder">{{cinema.cinema_name}}</div>
+<!--        影院地址-->
+        <div class="mt-3 font-bold">{{cinema.cinema_address}}</div>
+<!--        影院支持的放映厅-->
+        <div class="d-flex">
+          <div class="mt-15 mx-6"
+            v-for="(hall,hallIndex) of cinema.hall_category_list"
+            :key="'hall' + hallIndex">{{hall.hall_category_name}}</div>
+        </div>
+<!--        影院支持的服务-->
+        <div class="d-flex">
+          <div class="mt-6 mr-6"
+              v-for="(service,serviceIndex) of cinema.service_list"
+              :key="'service' + service.service_id">{{cinema.service_name}}</div>
+        </div>
+
+<!--        影院距离和价格-->
+        <div class="d-flex mt-6">
+            <div class="mr-8">{{cinema.cinema_distance}}km</div>
+            <div>￥{{cinema.cinema_min_price}}起</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  影片轮播部分-->
+  <div class="container d-flex align-items-center justify-content-between mt-21" v-if="cinema != undefined ">
+    <div class="font-36 font-bolder pointer color-333" @click="left_clicked()">&lt;</div>
+    <div style="width:1080px" class="overflow-hidden">
+      <div :style="{ marginLeft : move_left * -188 + 'px'}" class="d-flex align-items-start" >
+        <template v-for="(film,filmIndex) of cinema.film_list"
+                  :key="'film' + film.film_id">
+          <film :film="film" :class="{'active':selected_film == film}"
+              @click.prevent="film_clicked(film)"></film>
+        </template>
+      </div>
+
+    </div>
+    <div class="font-36 font-bolder pointer color-333" @click="right_clicked()">></div>
+  </div>
+
+<!--  影片信息部分-->
+  <div class="mt-21 container" v-if="selected_film != undefined">
+    <div class="d-flex align-items-center">
+      <div class="font-24 color-666 font-bolder mr-36">{{selected_film.film_name}}</div>
+      <div class="font-24 color-ff0000 font-bolder">{{selected_film.film_rank}}</div>
+    </div>
+    <div class="mt-9 font-12 color-999 d-flex">
+      <div class="mr-36">时长：{{selected_film.film_duration}}分钟</div>
+      <div class="mr-36 d-flex">
+        <div>类型：</div>
+        <div class="mr-8" v-for="(cate,cateIndex) of selected_film.category_list"
+          :key="'cate' + cate.category_id">{{cate.category_name}}</div>
+
+      </div>
+      <div class="d-flex">
+        <div class="mr-8">主演：</div>
+        <div class="mr-8" v-for="(actor,actorIndex) of selected_film.actor_list"
+          :key="'actor' + actor.actor_id">{{actor.actor_name}}</div>
+
+      </div>
+    </div>
+  </div>
+<!--  观影时间-->
+  <div class="container color-999 d-flex mt-21 align-items-center">
+    <div class="mr-18">观影时间：</div>
+    <span class="py-4 px-6 radius bg-red color-fff mr-16 pointer"
+          v-for="(time,timeIndex) of date_list"
+          :class="{'bg-red' : selected_date == time,'color-fff' : selected_date == time}"
+        :key="'time' + time.name"
+          @click="time_clicked(time)">{{time.name}}{{time.date}}</span>
+  </div>
+<!--  排片-->
+  <div class="container mt-21">
+    <template v-for="(round,roundIndex) of round_list"
+              :key="'round' + round.round_id">
+      <div class="py-6 px-30 radius shadow d-flex mt-15 pointer justify-content-between align-items-center">
+        <div class="w-20" align="center">
+          <div class="font-bold color-333">{{round.round_begin_time}}</div>
+          <div class="font-12 color-999 mt-12">{{round.round_end_time}}散场</div>
+        </div>
+        <div class="color-333" align="center">{{round.round_language}}</div>
+        <div class="w-20">
+          <div class="color-666">{{round.round_hall}}</div>
+          <div>
+            <div class="mr-6 font-12 color-999"
+                 v-for="(notice,noticeIndex) of round.round_notice_list"
+              :key="'notice' + notice.notice_id">{{round.notice_name}}</div>
+          </div>
+
+        </div>
+        <div class="color-ff0000 font-bold"align="center">￥{{round.round_price}}</div>
+        <div class="w-20 " align="center">
+          <span class="color-fff py-4 px-6  bg-red radius">选座购票</span>
+        </div>
+
+      </div>
+    </template>
+
+  </div>
+</div>
+
+<script type="module">
+
+  import navbar from "./component/navbar.js";
+  import film from "./component/film.js";
+
+  const app = Vue.createApp({
+    data(){
+      return{
+        index:2,
+        cinema:undefined,
+        selected_film:undefined,
+        move_left:0,
+        round_list:undefined,
+        //观影日期数据
+        data_list:[],
+        //用户选择的观影时间
+        selected_date:undefined,
+
+      }
+    },
+    methods : {
+      left_clicked(){
+        if (this.move_left >0){
+          this.move_left--
+        }
+      },
+      right_clicked(){
+         if (this.move_left < this.cinema.film_list.length -5){
+                this.move_left++
+         }
+      },
+      film_clicked(film){
+        this.selected_film = film
+      },
+      time_clicked(time){
+        this.selected_date = time
+      }
+    },
+    mounted(){
+      //页面挂载完毕之后需要获取到影院的数据
+      fetch("./data/cinema.json")
+        .then(response => response.json())
+        .then(response => {
+          this.cinema =response
+          //将当前页面默认选中的影片改成当前影院中的第一个影片
+          this.selected_film =this.cinema.film_list[0]
+
+        })
+      fetch("./data/round_list.json")
+        .then(response => response.json())
+        .then(response => {
+          this.round_list =response
+        })
+      //生成观影时间
+      let date = new Date()
+      //循环生成观影时间
+      for (let i= 0; i<7; i++){
+        //
+        let json = {}
+        json.date = `${date.getMonth() + 1}月${date.getDate() + i}日`
+        //设置对象的周
+        if(i <= 1){
+          json.name = i == 0 ? "今天" : "明天"
+        }else{
+          switch (date.getDay() + i ){
+            //case 0 : json.name = "周日";break;
+            case 1 : json.name = "周一";break;
+            case 2 : json.name = "周二";break;
+            case 3 : json.name = "周三";break;
+            case 4 : json.name = "周四";break;
+            case 5 : json.name = "周五";break;
+            case 6 : json.name = "周六";break;
+            case 7 : json.name = "周日";break;
+          }
+          //将这个带有时间日期的json对象加入到数组中
+          this.date_list.push(json)
+        }
+        console.log(this.date_list)
+        //默认第一个就是用户选择的观影时间
+        this.selected_date = this.date_list[0]
+      }
+
+    }
+  })
+
+  app.component("navbar",navbar)
+  app.component("film",film)
+
+  app.mount("#app")
+</script>
+</body>
+</html>

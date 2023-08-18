@@ -1,0 +1,424 @@
+[{
+		"cinema_id": 1,
+		"brand_id" : 2,
+		"location_id" : 16,
+		"cinema_name": "万达影城（金山万达广场IMAX店）",
+		"cinema_address": "金山区龙皓路1088号万达广场四楼（蒙山北路）",
+		"cinema_min_price": 15.1,
+		"cinema_distance": 55,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 2,
+		"brand_id" : 17,
+		"location_id" : 13,
+		"cinema_name": "柘林影剧院",
+		"cinema_address": "奉贤区钦林北路31号",
+		"cinema_min_price": 38,
+		"cinema_distance": 45,
+		"service_list": [
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 3,
+		"brand_id" : 17,
+		"location_id" : 5,
+		"cinema_name": "珠影沪亚国际影城（松江店）",
+		"cinema_address": "松江区车墩镇南乐路456号4幢4层",
+		"cinema_min_price": 16,
+		"cinema_distance": 29,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 4,
+		"brand_id" : 5,
+		"location_id" : 9,
+		"cinema_name": "大光明丽星汇影城（杨浦店）",
+		"cinema_address": "杨浦区民星路378号太平洋生活广场2F",
+		"cinema_min_price": 39,
+		"cinema_distance": 35,
+		"service_list": [
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 5,
+		"brand_id" : 17,
+		"location_id" : 4,
+		"cinema_name": "中宏影城",
+		"cinema_address": "宝山区殷高西路555号西区3楼",
+		"cinema_min_price": 15,
+		"cinema_distance": 25,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 6,
+		"brand_id" : 1,
+		"location_id" : 11,
+		"cinema_name": "上影青浦时光国际影城",
+		"cinema_address": "青浦区华新镇华志路789号新尚生活广场5楼",
+		"cinema_min_price": 38,
+		"cinema_distance": 15,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 7,
+		"brand_id" : 6,
+		"location_id" : 2,
+		"cinema_name": "百丽宫影城（ifc商场店）",
+		"cinema_address": "浦东新区陆家嘴世纪大道8号上海国金中心商场LG1-LG2层",
+		"cinema_min_price": 65,
+		"cinema_distance": 25,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 8,
+		"brand_id" : 17,
+		"location_id" : 12,
+		"cinema_name": "国泰电影院",
+		"cinema_address": "黄浦区淮海中路870号（茂名南路口）",
+		"cinema_min_price": 43,
+		"cinema_distance": 35,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 9,
+		"brand_id" : 3,
+		"location_id" : 3,
+		"cinema_name": "CGV影城（七宝万科广场IMAX店）",
+		"cinema_address": "闵行区漕宝路3366号上海七宝万科广场5层L501单元",
+		"cinema_min_price": 51,
+		"cinema_distance": 45,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 10,
+		"brand_id" : 17,
+		"location_id" : 5,
+		"cinema_name": "太平洋影城（松江店）",
+		"cinema_address": "松江区文诚路500弄1号四楼（塞纳左岸）",
+		"cinema_min_price": 34,
+		"cinema_distance": 55,
+		"service_list": [
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 11,
+		"brand_id" : 17,
+		"location_id" : 16,
+		"cinema_name": "DFC影城金山店",
+		"cinema_address": "金山区海汇街500号11号楼401室",
+		"cinema_min_price": 32,
+		"cinema_distance": 75,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	},
+	{
+		"cinema_id": 12,
+		"brand_id" : 17,
+		"location_id" : 13,
+		"cinema_name": "金汇影剧院",
+		"cinema_address": "奉贤区奉贤金汇镇中心路10号（近金汇镇社会事业服务中心）",
+		"cinema_min_price": 38,
+		"cinema_distance": 35,
+		"service_list": [{
+				"service_id": 1,
+				"service_name": "可改签"
+			},
+			{
+				"service_id": 2,
+				"service_name": "可退票"
+			}
+		],
+		"hall_category_list": [{
+				"hall_category_id": 1,
+				"hall_category_name": "IMAX厅"
+			},
+			{
+				"hall_category_id": 3,
+				"hall_category_name": "杜比全景声厅"
+			},
+			{
+				"hall_category_id": 7,
+				"hall_category_name": "LUXE巨幕厅"
+			},
+			{
+				"hall_category_id": 12,
+				"hall_category_name": "4D厅"
+			},
+			{
+				"hall_category_id": 14,
+				"hall_category_name": "120帧/4K厅"
+			}
+		]
+	}
+]

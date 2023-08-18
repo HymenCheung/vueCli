@@ -1,0 +1,895 @@
+{
+	"cinema_id" : 1 , 
+	"cinema_name" : "万达影城（金山万达广场IMAX店）" , 
+	"cinema_address" : "金山区龙皓路1088号万达广场四楼（蒙山北路）" , 
+	"cinema_cover_image" : "cinema01.png",
+	"cinema_min_price" : 15.1 , 
+	"cinema_distance" : 55 ,
+	"service_list" : [
+		{ "service_id" : 1 , "service_name" : "可改签" },
+		{ "service_id" : 2 , "service_name" : "可退票" }
+	],
+	"hall_category_list" : [
+		{"hall_category_id" : 1 , "hall_category_name" : "IMAX厅"},
+		{"hall_category_id" : 3 , "hall_category_name" : "杜比全景声厅"},
+		{"hall_category_id" : 7 , "hall_category_name" : "LUXE巨幕厅"},
+		{"hall_category_id" : 12 , "hall_category_name" : "4D厅"},
+		{"hall_category_id" : 14 , "hall_category_name" : "120帧/4K厅"}
+	],
+	"film_list" : [
+		{
+			"film_id" : "1001",
+			"film_name" : "指环王：护戒使者",
+			"film_title" : "The Lord of the Rings: The Fellowship",
+			"film_cover_image" : "film01.png",
+			"film_duration" : 179,
+			"film_release_date" : "2021-04-16",
+			"film_rank" : 8.9,
+			"film_box" : 260.9,
+			"category_list" : [
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1011,
+					"category_name" : "冒险"
+				},
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1002,
+					"country_name" : "美国"
+				},
+				{
+					"country_id" : 1017,
+					"country_name" : "新西兰"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "彼得·杰克逊",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "伊莱贾·伍德",
+					"actor_cover_image" : "actor01.png",
+					"play" : "弗罗多 Frodo"
+				},
+				{
+					"actor_id" : 1002,
+					"actor_name" : "伊恩·麦克莱恩",
+					"actor_cover_image" : "actor02.png",
+					"play" : "甘道夫 Gandalf"
+				},
+				{
+					"actor_id" : 1003,
+					"actor_name" : "西恩·奥斯汀",
+					"actor_cover_image" : "actor03.png",
+					"play" : "山姆 Sam"
+				},
+				{
+					"actor_id" : 1004,
+					"actor_name" : "维果·莫腾森",
+					"actor_cover_image" : "actor04.png",
+					"play" : "阿拉贡 Aragor"
+				}
+			]
+		},
+		{
+			"film_id" : "1002",
+			"film_name" : "名侦探柯南：绯色的子弹",
+			"film_title" : "名探偵コナン 緋色の弾丸",
+			"film_cover_image" : "film02.png",
+			"film_duration" : 110,
+			"film_release_date" : "2021-04-17",
+			"film_box" : 259.0,
+			"film_rank" : 8.5,
+			"category_list" : [
+				{
+					"category_id" : 1003,
+					"category_name" : "动画"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1009,
+					"category_name" : "悬疑"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1004,
+					"country_name" : "日本"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1002,
+					"director_name" : "永冈智佳",
+					"director_cover_image" : "director02.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1005,
+					"actor_name" : "高山南",
+					"actor_cover_image" : "actor05.png",
+					"play" : "江户川柯南"
+				},
+				{
+					"actor_id" : 1006,
+					"actor_name" : "山崎和佳奈",
+					"actor_cover_image" : "actor06.png",
+					"play" : "毛利兰"
+				},
+				{
+					"actor_id" : 1007,
+					"actor_name" : "小山力也",
+					"actor_cover_image" : "actor07.png",
+					"play" : "毛利小五郎"
+				},
+				{
+					"actor_id" : 1008,
+					"actor_name" : "池田秀一",
+					"actor_cover_image" : "actor08.png",
+					"play" : "赤井秀一"
+				}
+			]
+		},
+		{
+			"film_id" : "1003",
+			"film_name" : "我的姐姐",
+			"film_title" : "Sister",
+			"film_cover_image" : "film03.png",
+			"film_duration" : 127,
+			"film_release_date" : "2021-04-02",
+			"film_rank" : 8.9,
+			"film_box" : 258.0,
+			"category_list" : [
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1015,
+					"category_name" : "家庭"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1003,
+					"director_name" : "殷若昕",
+					"director_cover_image" : "director03.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1009,
+					"actor_name" : "张子枫",
+					"actor_cover_image" : "actor09.png",
+					"play" : "安然"
+				},
+				{
+					"actor_id" : 1010,
+					"actor_name" : "肖央",
+					"actor_cover_image" : "actor10.png",
+					"play" : "武东风"
+				},
+				{
+					"actor_id" : 1011,
+					"actor_name" : "朱媛媛",
+					"actor_cover_image" : "actor11.png",
+					"play" : "安蓉蓉"
+				},
+				{
+					"actor_id" : 1012,
+					"actor_name" : "段博文",
+					"actor_cover_image" : "actor12.png",
+					"play" : "钟勇"
+				}
+			]
+		},
+		{
+			"film_id" : "1004",
+			"film_name" : "八月未央",
+			"film_title" : "August Never Ends",
+			"film_cover_image" : "film04.png",
+			"film_duration" : 95,
+			"film_release_date" : "2021-04-16",
+			"film_rank" : 6.9,
+			"film_box" : 257.0,
+			"category_list" : [
+				{
+					"category_id" : 1001,
+					"category_name" : "爱情"
+				},
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1025,
+					"category_name" : "青春"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1004,
+					"director_name" : "李凯",
+					"director_cover_image" : "director04.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1013,
+					"actor_name" : "钟楚曦",
+					"actor_cover_image" : "actor13.png",
+					"play" : "未央"
+				},
+				{
+					"actor_id" : 1014,
+					"actor_name" : "罗晋",
+					"actor_cover_image" : "actor14.png",
+					"play" : "朝颜"
+				},
+				{
+					"actor_id" : 1015,
+					"actor_name" : "谭松韵",
+					"actor_cover_image" : "actor15.png",
+					"play" : "小乔"
+				},
+				{
+					"actor_id" : 1016,
+					"actor_name" : "田雨",
+					"actor_cover_image" : "actor16.png",
+					"play" : "黑泽老师"
+				}
+			]
+		},
+		{
+			"film_id" : "1005",
+			"film_name" : "你好，李焕英",
+			"film_title" : "Hi, Mom",
+			"film_cover_image" : "film05.png",
+			"film_duration" : 128,
+			"film_release_date" : "2021-02-12",
+			"film_rank" : 9.5,
+			"film_box" : 256.0,
+			"category_list" : [
+				{
+					"category_id" : 1002,
+					"category_name" : "喜剧"
+				},
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "贾玲",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "贾玲",
+					"actor_cover_image" : "actor01.png",
+					"play" : "贾晓玲"
+				},
+				{
+					"actor_id" : 1002,
+					"actor_name" : "张小斐",
+					"actor_cover_image" : "actor02.png",
+					"play" : "李焕英"
+				},
+				{
+					"actor_id" : 1003,
+					"actor_name" : "沈腾",
+					"actor_cover_image" : "actor03.png",
+					"play" : "沈光林"
+				},
+				{
+					"actor_id" : 1004,
+					"actor_name" : "陈赫",
+					"actor_cover_image" : "actor04.png",
+					"play" : "冷特"
+				}
+			]
+		},
+		{
+			"film_id" : "1006",
+			"film_name" : "悬崖之上",
+			"film_title" : "Cliff Walkers",
+			"film_cover_image" : "film06.png",
+			"film_duration" : 120,
+			"film_release_date" : "2021-04-30",
+			"film_rank" : 9.2,
+			"film_box" : 255.0,
+			"category_list" : [
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1009,
+					"category_name" : "悬疑"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "张艺谋",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "张译",
+					"actor_cover_image" : "actor01.png",
+					"play" : "张宪臣"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "于和伟",
+					"actor_cover_image" : "actor01.png",
+					"play" : "周乙"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "秦海璐",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "朱亚文",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				}
+			]
+		},
+		{
+			"film_id" : "1007",
+			"film_name" : "唐人街探案3",
+			"film_title" : "Detective Chinatown 3",
+			"film_cover_image" : "film07.png",
+			"film_duration" : 136,
+			"film_release_date" : "2021-02-12",
+			"film_rank" : 8.8,
+			"film_box" : 254.0,
+			"category_list" : [
+				{
+					"category_id" : 1002,
+					"category_name" : "喜剧"
+				},
+				{
+					"category_id" : 1009,
+					"category_name" : "悬疑"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "陈思诚",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "王宝强",
+					"actor_cover_image" : "actor01.png",
+					"play" : "唐仁"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "刘昊然",
+					"actor_cover_image" : "actor01.png",
+					"play" : "秦风"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "妻夫木聪",
+					"actor_cover_image" : "actor01.png",
+					"play" : "野田昊"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "托尼·贾",
+					"actor_cover_image" : "actor01.png",
+					"play" : "杰克贾"
+				}
+			]
+		},
+		{
+			"film_id" : "1008",
+			"film_name" : "人潮汹涌",
+			"film_title" : "Endgame",
+			"film_cover_image" : "film08.png",
+			"film_duration" : 119,
+			"film_release_date" : "2021-02-12",
+			"film_rank" : 9.1,
+			"film_box" : 253.0,
+			"category_list" : [
+				{
+					"category_id" : 1001,
+					"category_name" : "爱情"
+				},
+				{
+					"category_id" : 1002,
+					"category_name" : "喜剧"
+				},	
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "饶晓志",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "刘德华",
+					"actor_cover_image" : "actor01.png",
+					"play" : "周全"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "肖央",
+					"actor_cover_image" : "actor01.png",
+					"play" : "陈小萌"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "万茜",
+					"actor_cover_image" : "actor01.png",
+					"play" : "李想"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "程怡",
+					"actor_cover_image" : "actor01.png",
+					"play" : "九蓉"
+				}
+			]
+		},
+		{
+			"film_id" : "1009",
+			"film_name" : "指环王：双塔奇兵",
+			"film_title" : "The Lord of the Rings: The Two Towers",
+			"film_cover_image" : "film09.png",
+			"film_duration" : 179,
+			"film_release_date" : "2021-04-23",
+			"film_rank" : 8.9,
+			"film_box" : 252.0,
+			"category_list" : [
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1011,
+					"category_name" : "冒险"
+				},
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "彼得·杰克逊",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "伊莱贾·伍德",
+					"actor_cover_image" : "actor01.png",
+					"play" : "弗罗多 Frodo"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "伊恩·麦克莱恩",
+					"actor_cover_image" : "actor01.png",
+					"play" : "甘道夫 Gandalf"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "丽芙·泰勒",
+					"actor_cover_image" : "actor01.png",
+					"play" : "阿尔温 Arwen"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "维果·莫腾森",
+					"actor_cover_image" : "actor01.png",
+					"play" : "阿拉贡 Arago"
+				}
+			]
+		},
+		{
+			"film_id" : "1010",
+			"film_name" : "六人-泰坦尼克上的中国幸存者",
+			"film_title" : "The Six",
+			"film_cover_image" : "film10.png",
+			"film_duration" : 102,
+			"film_release_date" : "2021-04-16",
+			"film_rank" : 8.3,
+			"film_box" : 251.0,
+			"category_list" : [
+				{
+					"category_id" : 1024,
+					"category_name" : "纪录片"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "罗飞",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "施万克",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "方国民",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "张帼蕾",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "李蔼芬",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				}
+			]
+		},
+		{
+			"film_id" : "1011",
+			"film_name" : "哥斯拉大战金刚",
+			"film_title" : "Godzilla vs Kong",
+			"film_cover_image" : "film11.png",
+			"film_duration" : 113,
+			"film_release_date" : "2021-03-26",
+			"film_rank" : 8.9,
+			"film_box" : 250.0,
+			"category_list" : [
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1011,
+					"category_name" : "冒险"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1002,
+					"country_name" : "美国"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "亚当·温加德",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "哥斯拉",
+					"actor_cover_image" : "actor01.png",
+					"play" : "哥斯拉"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "金刚",
+					"actor_cover_image" : "actor01.png",
+					"play" : "金刚"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "亚历山大·斯卡",
+					"actor_cover_image" : "actor01.png",
+					"play" : "Nathan Lind"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "米莉·波比·布朗",
+					"actor_cover_image" : "actor01.png",
+					"play" : "Madison Rus"
+				}
+			]
+		},
+		{
+			"film_id" : "1012",
+			"film_name" : "阳光劫匪",
+			"film_title" : "Tiger Robbers",
+			"film_cover_image" : "film12.png",
+			"film_duration" : 107,
+			"film_release_date" : "2021-05-01",
+			"film_rank" : 8.9,
+			"film_box" : 249.0,
+			"category_list" : [
+				{
+					"category_id" : 1002,
+					"category_name" : "喜剧"
+				},
+				{
+					"category_id" : 1004,
+					"category_name" : "剧情"
+				},
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "李玉",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "马丽",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "宋佳",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "文文",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "张海宇",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				}
+			]
+		},
+		{
+			"film_id" : "1013",
+			"film_name" : "阿凡达",
+			"film_title" : "Avatar",
+			"film_cover_image" : "film13.png",
+			"film_duration" : 162,
+			"film_release_date" : "2010-01-04",
+			"film_rank" : 9.4,
+			"film_box" : 248.0,
+			"category_list" : [
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				},
+				{
+					"category_id" : 1008,
+					"category_name" : "动作"
+				},
+				{
+					"category_id" : 1011,
+					"category_name" : "冒险"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1002,
+					"country_name" : "美国"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "詹姆斯·卡梅隆",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "萨姆·沃辛顿",
+					"actor_cover_image" : "actor01.png",
+					"play" : "杰克·萨利"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "佐伊·索尔达娜",
+					"actor_cover_image" : "actor01.png",
+					"play" : "涅提妮"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "米歇尔·罗德里",
+					"actor_cover_image" : "actor01.png",
+					"play" : "楚蒂·查肯"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "西格妮·韦弗",
+					"actor_cover_image" : "actor01.png",
+					"play" : "格蕾丝博士"
+				}
+			]
+		},
+		{
+			"film_id" : "1014",
+			"film_name" : "熊出没·狂野大陆",
+			"film_title" : "Boonie Bears:The Wild Life",
+			"film_cover_image" : "film14.png",
+			"film_duration" : 99,
+			"film_release_date" : "2021-02-12",
+			"film_rank" : 8.9,
+			"film_box" : 247.0,
+			"category_list" : [
+				{
+					"category_id" : 1002,
+					"category_name" : "喜剧"
+				},
+				{
+					"category_id" : 1003,
+					"category_name" : "动画"
+				},
+				{
+					"category_id" : 1007,
+					"category_name" : "科幻"
+				}
+			],
+			"country_list" : [
+				{
+					"country_id" : 1001,
+					"country_name" : "大陆"
+				}
+			],
+			"director_list" : [
+				{
+					"director_id" : 1001,
+					"director_name" : "丁亮",
+					"director_cover_image" : "director01.png"
+				}
+			],
+			"actor_list" : [
+				{
+					"actor_id" : 1001,
+					"actor_name" : "邵和麒",
+					"actor_cover_image" : "actor01.png",
+					"play" : "饰演角色"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "张秉君",
+					"actor_cover_image" : "actor01.png",
+					"play" : "熊二"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "谭笑",
+					"actor_cover_image" : "actor01.png",
+					"play" : "光头强"
+				},
+				{
+					"actor_id" : 1001,
+					"actor_name" : "张伟",
+					"actor_cover_image" : "actor01.png",
+					"play" : "熊大"
+				}
+			]
+		}
+	]
+}
