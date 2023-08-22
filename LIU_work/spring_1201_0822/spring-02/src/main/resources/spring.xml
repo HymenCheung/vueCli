@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean class="con.atstudy.dao.UserDao" id="userDao">
+
+    </bean>
+
+    <bean class="con.atstudy.service.impl.UserServiceImpl" id="userService">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean class="con.atstudy.controller.UserController" id="userController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <!-- 配置邮件发送的属性 -->
+    <util:properties id="emailProperties">
+        <prop key="mail.smtp.auth">true</prop>
+        <prop key="mail.smtp.starttls.enable">true</prop>
+        <prop key="mail.smtp.host">smtp.qq.com</prop>
+        <prop key="mail.smtp.port">587</prop>
+        <prop key="mail.smtp.username">your_qq_email@qq.com</prop>
+        <prop key="mail.smtp.password">your_qq_password</prop>
+        <prop key="mail.smtp.protocol">smtp</prop>
+    </util:properties>
+
+    <!-- 配置JavaMailSender -->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="javaMailProperties" ref="emailProperties"/>
+    </bean>
+
+</beans>

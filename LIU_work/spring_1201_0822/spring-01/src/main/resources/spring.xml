@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="com.atstudy.domain.Person" id="person" init-method="init" destroy-method="destroy">
+        <property name="name" value="tom"/>
+        <property name="age" value="18"/>
+    </bean>
+
+
+    <bean class="com.atstudy.domain.Student" id="student">
+    <property name="name" value="张三"/>
+    <property name="age" value="18"/>
+    </bean>
+
+<!--    配置实例工厂创建对象-->
+<!--    将实例工厂托管到容器中-->
+    <bean class="com.atstudy.factory.StudentFactory" id="studentFactory"></bean>
+    <bean class="com.atstudy.factory.StudentFactory" id="studentFactory"></bean>
+
+<bean class="com.atstudy.domain.School" id="school">
+    <constructor-arg name="name" value="李四"/>
+    <constructor-arg name="age" value="18"/>
+    <constructor-arg name="address" value="上海"/>
+</bean>
+<!--给user属性赋值-->
+    <bean class="com.atstudy.domain.User" id="user" lazy-init="true">
+        <property name="id" value="1001" />
+        <property name="name" value="洛杉矶" />
+        <property name="age" value="16" />
+        <property name="address" value="洛杉矶" />
+
+        <property name="arr">
+            <array>
+                <value>1</value>
+                <value>2</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>红色</value>
+                <value>绿色</value>
+            </list>
+        </property>
+<!--        给set赋值-->
+        <property name="set">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+            </set>
+        </property>
+<!-- 给map赋值-->
+        <property name="map">
+            <map>
+                <entry key="brand" value="联系"/>
+                <entry key="brand" value="和我"/>
+
+            </map>
+        </property>
+        <property  name="School" ref="school"/>
+    </bean>
+
+
+    <!-- 配置邮件发送的属性 -->
+    <util:properties id="emailProperties">
+        <prop key="mail.smtp.auth">true</prop>
+        <prop key="mail.smtp.starttls.enable">true</prop>
+        <prop key="mail.smtp.host">smtp.qq.com</prop>
+        <prop key="mail.smtp.port">587</prop>
+        <prop key="mail.smtp.username">your_qq_email@qq.com</prop>
+        <prop key="mail.smtp.password">your_qq_password</prop>
+        <prop key="mail.smtp.protocol">smtp</prop>
+    </util:properties>
+
+    <!-- 配置JavaMailSender -->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="javaMailProperties" ref="emailProperties"/>
+    </bean>
+
+
+</beans>
